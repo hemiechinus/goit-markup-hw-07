@@ -1,13 +1,13 @@
 :root {
   --color-link: #2196f3;
-  --modal-button: #188CE8;
+  --modal-button: #188ce8;
   --color: #212121;
   --color-text: #757575;
   --color-banner: #2f303a;
   --color-w: #ffffff;
   --portfolo-button: #f5f4fa;
-  --color-icon:#AFB1B8;
-  --cubic:cubic-bezier(0.4, 0, 0.2,1);
+  --color-icon: #afb1b8;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -51,12 +51,12 @@ address {
   margin-left: auto;
   fill: var(--color-text);
 }
-.all{
+.all {
   margin-right: 10px;
-} 
+}
 .contacts-link .item:not(:first-child) {
   margin-left: 50px;
-} 
+}
 .contacts-link .link {
   display: flex;
   align-items: center;
@@ -85,19 +85,18 @@ address {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
-
 }
-.link.current{
-  color: var(--color-link); 
-  
+.link.current {
+  color: var(--color-link);
+
   /*
   border-bottom: 4px solid #2196f3;
   border-radius: 2px; */
 }
-.current{
+.current {
   position: relative;
 }
-.current::after{
+.current::after {
   display: block;
   left: 0;
   bottom: 0;
@@ -107,7 +106,6 @@ address {
   border-radius: 2px;
   background: var(--color-link);
   position: absolute;
-
 }
 /*меню навігації*/
 
@@ -118,8 +116,8 @@ address {
   color: var(--color-link);
   fill: var(--color-link);
 }
-.link-item{
-font-weight: 500;
+.link-item {
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -139,7 +137,12 @@ font-weight: 500;
 .banner {
   background: var(--color-banner);
   max-width: 1600px;
-  background-image: linear-gradient(to right, rgba(48, 58, 47, 0.4), rgba(47, 48, 58, 0.4)), url('../images/main-img.svg');
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/main-img.svg");
   color: var(--color-w);
   padding: 200px 0px;
 }
@@ -164,8 +167,10 @@ font-weight: 500;
   letter-spacing: 0.06em;
   margin: 0 auto;
   margin-top: 30px;
+  padding: 10px 32px;
   border: 1px solid #000000;
   border-radius: 4px;
+  border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   display: block;
   text-align: center;
@@ -174,8 +179,8 @@ font-weight: 500;
   transition-timing-function: var(--cubic);
 }
 .button:hover,
-.button:focus{
-  color:var(--color-w);
+.button:focus {
+  color: var(--color-w);
   background-color: rgba(24, 140, 232, 1);
   border-radius: 0px;
 }
@@ -206,7 +211,7 @@ font-weight: 500;
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
-  transition-property: background,color, box-shadow;
+  transition-property: background, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
@@ -214,14 +219,15 @@ font-weight: 500;
 .buttons:focus {
   background: var(--color-link);
   color: var(--color-w);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*portfolio*/
 /*чому ми і чим займаємось*/
 .section-why {
   display: flex;
 }
-.why-icon{
+.why-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,10 +271,10 @@ font-weight: 500;
 .title-img .images:not(:last-child) {
   margin-right: 30px;
 }
-.title-img img{
+.title-img img {
   display: block;
 }
-.label{
+.label {
   position: relative;
 }
 .title-img .title {
@@ -280,7 +286,7 @@ font-weight: 500;
   position: absolute;
   width: 100%;
   bottom: 0px;
- }
+}
 
 /*наша команда*/
 .team {
@@ -320,7 +326,7 @@ font-weight: 500;
   font-size: 16px;
   margin-bottom: 16px;
 }
-.icons-list{
+.icons-list {
   display: flex;
   justify-content: space-between;
   width: 206px;
@@ -339,7 +345,7 @@ font-weight: 500;
   justify-content: center;
   align-items: center;
   fill: var(--color-icon);
-  transition-property: fill, background ;
+  transition-property: fill, background;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
@@ -347,18 +353,17 @@ font-weight: 500;
 .first-list:focus {
   background: var(--color-link);
   fill: var(--color-w);
- 
 }
 /*client section*/
-.client-list{
+.client-list {
   display: flex;
   justify-content: space-between;
 }
 
-.client:not(:last-child){
+.client:not(:last-child) {
   margin-right: 30px;
 }
-.client{
+.client {
   display: block;
   width: 170px;
   height: 92px;
@@ -366,7 +371,7 @@ font-weight: 500;
   border: 1px solid var(--color-icon);
   border-radius: 4px;
   fill: var(--color-icon);
-  transition-property: fill, border-color ;
+  transition-property: fill, border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
@@ -386,7 +391,7 @@ font-weight: 500;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer .container{
+.footer .container {
   display: flex;
   align-items: baseline;
 }
@@ -400,10 +405,10 @@ font-weight: 500;
 .lin {
   color: rgba(255, 255, 255, 0.6);
 }
-.connect{
+.connect {
   margin-left: 70px;
 }
-.connect .title{
+.connect .title {
   margin-bottom: 20px;
   font-size: 14px;
   text-transform: uppercase;
@@ -427,20 +432,20 @@ font-weight: 500;
   fill: currentColor;
 }
 
-.mailing{
-    margin-left: 93px;
+.mailing {
+  margin-left: 93px;
 }
 
-.mailing .title{
+.mailing .title {
   margin-bottom: 20px;
   font-size: 14px;
   text-transform: uppercase;
 }
-.email-form{
+.email-form {
   align-items: center;
   display: flex;
 }
-.label-form{
+.label-form {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -455,7 +460,7 @@ font-weight: 500;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.second-button{
+.second-button {
   cursor: pointer;
   background: var(--color-link);
   color: var(--color-w);
@@ -463,24 +468,23 @@ font-weight: 500;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  width: 200px;
-  padding: 10px 0;
+  padding: 10px 22px;
   margin-left: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px; 
+  border-radius: 4px;
   border: 0px;
   transition-property: background;
-  transition-duration:250ms;
-  transition-timing-function: var(--cubic) ;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
 }
 .second-button:hover,
-.second-button:focus{
+.second-button:focus {
   background: var(--modal-button);
 }
-.second-button svg{
+.second-button svg {
   margin-left: 10px;
 }
 /*portfolio main*/
@@ -501,12 +505,13 @@ font-weight: 500;
 
 .examples-item a:focus,
 .examples-item a:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.examples-item a{
+.examples-item a {
   display: block;
 }
-.port-img{
+.port-img {
   display: block;
 }
 .description {
@@ -532,15 +537,15 @@ font-weight: 500;
   letter-spacing: 0.03em;
   color: var(--color-text);
 }
-.port-overlay{
+.port-overlay {
   position: relative;
   overflow: hidden;
 }
 .port-link:hover .description-text,
-.port-link:focus .description-text{
+.port-link:focus .description-text {
   transform: translateY(0);
 }
-.description-text{
+.description-text {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -558,26 +563,26 @@ font-weight: 500;
   transition-timing-function: var(--cubic);
 }
 /*modal windows*/
-.backdrop  {
+.backdrop {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  visibility:visible;  
+  visibility: visible;
 
-  transition-property: opacity,visibility ;
-    transition-duration: 250ms;
-    transition-timing-function: var(--cubic);
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
-.modal{
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -586,29 +591,28 @@ font-weight: 500;
   height: 581px;
   background: var(--color-w);
   padding: 40px;
-  
 }
-.close{
+.close {
   display: flex;
   cursor: pointer;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   background: var(--color-w);
-  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
   position: absolute;
   right: 8px;
   top: 8px;
   transition-property: fill;
-  transition-duration:250ms;
-  transition-timing-function: var(--cubic) ;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
 }
 .close:hover,
-.close:focus{
+.close:focus {
   fill: var(--color-link);
 }
-.modal .title{
+.modal .title {
   margin-bottom: 12px;
   color: var(--color);
   font-weight: bold;
@@ -617,40 +621,40 @@ font-weight: 500;
   letter-spacing: 0.03em;
   text-align: center;
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
   color: var(--color);
 }
-.text-box{
+.text-box {
   margin-bottom: 20px;
 }
-.form-label{
+.form-label {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color:var(--color-text);
+  color: var(--color-text);
   margin-bottom: 10px;
   position: relative;
 }
 
-.form-input{
+.form-input {
   cursor: pointer;
   margin-top: 4px;
   padding: 0;
   padding-left: 40px;
   width: 100%;
-  height: 40px; 
+  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.form-icon{
+.form-icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
 }
-.form-text{
+.form-text {
   width: 100%;
   margin-top: 4px;
   padding: 12px 16px;
@@ -659,10 +663,12 @@ font-weight: 500;
   border-radius: 4px;
   cursor: pointer;
 }
-.form-label:hover, 
+.form-text:hover,
+.form-text:focus,
+.form-label:hover,
 .form-label:focus,
 .form-input:focus,
-.form-input:hover{
+.form-input:hover {
   border-color: var(--color-link);
   outline: none;
 }
@@ -676,24 +682,24 @@ font-weight: 500;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.form-text placeholder{
+.form-text placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.form .second-button{
-  margin:0 auto;
+.form .modal-button {
+  margin: 0 auto;
 }
 
-.modal-form{
+.modal-form {
   display: flex;
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
   align-items: center;
 }
-.form-checkbox{
+.form-checkbox {
   appearance: none;
   position: absolute;
- /* width: 1px;
+  /* width: 1px;
   height: 1px;
   margin:-1px;
   border:0;
@@ -702,7 +708,7 @@ font-weight: 500;
   overflow: hidden;*/
 }
 
-.test{
+.test {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -713,22 +719,46 @@ font-weight: 500;
   transition-timing-function: var(--cubic);
 }
 
-.form-checkbox:checked + .test{
+.form-checkbox:focus + .test {
   border-color: var(--color-link);
-  background-color: var(--color-link); 
-  background-image: url('../images/icon-check.svg');
+}
+.form-checkbox:checked + .test {
+  border-color: var(--color-link);
+  background-color: var(--color-link);
+  background-image: url("../images/icon-check.svg");
   background-size: contain;
   border-radius: 2px;
   background-origin: content-box;
 }
-.checkbox-text{
+.checkbox-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-text);
   padding-left: 8.38px;
 }
-.form-link{
-  color:var(--color-link);
+.form-link {
+  color: var(--color-link);
   text-decoration: underline;
+}
+.modal-button {
+  cursor: pointer;
+  background: var(--color-link);
+  color: var(--color-w);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0px;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+.modal-button:hover,
+.modal-button:focus {
+  background: var(--modal-button);
 }
