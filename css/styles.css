@@ -118,7 +118,7 @@ address {
   color: var(--color-link);
   fill: var(--color-link);
 }
-.contacts_icon {
+.contacts__icon {
   margin-right: 10px;
 }
 
@@ -184,12 +184,14 @@ address {
   background-color: rgba(24, 140, 232, 1);
   border-radius: 0px;
 }
-
 /*чому ми і чим займаємось*/
-.section-why {
+.specifics {
   display: flex;
 }
-.why-icon {
+.specifics__item:not(:last-child) {
+  margin-right: 30px;
+}
+.specifics__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,10 +200,7 @@ address {
   background: var(--portfolo-button);
   border-radius: 4px;
 }
-.why:not(:last-child) {
-  margin-right: 30px;
-}
-.why .title {
+.specifics__name {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
@@ -209,7 +208,7 @@ address {
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
-.title-text {
+.specifics__description {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -218,7 +217,7 @@ address {
 .work {
   padding-bottom: 94px;
 }
-.title-work {
+.work__header {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -226,20 +225,19 @@ address {
   text-align: center;
   margin-bottom: 50px;
 }
-
-.title-img {
+.work__list {
   display: flex;
 }
-.title-img .images:not(:last-child) {
+.work__item:not(:last-child) {
   margin-right: 30px;
 }
-.title-img img {
-  display: block;
-}
-.label {
+.work__card {
   position: relative;
 }
-.title-img .title {
+.work__card img {
+  display: block;
+}
+.work__name {
   background: rgba(47, 48, 58, 0.8);
   color: var(--color-w);
   text-transform: uppercase;
@@ -251,55 +249,55 @@ address {
 }
 
 /*наша команда*/
+/* нахуя АЙКОН там ставив?????*/
 .team {
   background-color: var(--portfolo-button);
   letter-spacing: 0.03em;
 }
-.team-head {
+.team__head {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
   margin-bottom: 50px;
   text-align: center;
 }
-.section-team {
+.team__list {
   display: flex;
   justify-content: space-between;
 }
-.team-people {
+.team__card {
   background-color: var(--color-w);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.desc {
+.team__description {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
   line-height: 1.19;
 }
-.people-name {
+.team__name {
   font-weight: 500;
   margin-bottom: 10px;
   font-size: 16px;
 }
-.people-text {
+.team__function {
   color: var(--color-text);
   font-size: 16px;
   margin-bottom: 16px;
 }
-.icons-list {
+.team__link {
   display: flex;
   justify-content: space-between;
   width: 206px;
   margin: 0 auto;
   fill: var(--color-icon);
 }
-.icons-list li:not(:last-child) {
+.team__link li:not(:last-child) {
   margin-right: 10px;
 }
-
-.first-list {
+.team__icon {
   display: flex;
   height: 44px;
   width: 44px;
@@ -311,21 +309,32 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.first-list:hover,
-.first-list:focus {
+.team__icon:hover,
+.team__icon:focus {
   background: var(--color-link);
   fill: var(--color-w);
 }
+
+/*
+
+
+посипався десь футер в footer-icons, глянути що за нахуй
+
+*/
 /*client section*/
-.client-list {
+
+.client__head {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.client__list {
   display: flex;
   justify-content: space-between;
 }
-
-.client:not(:last-child) {
-  margin-right: 30px;
-}
-.client {
+.client__link {
   display: block;
   width: 170px;
   height: 92px;
@@ -337,8 +346,11 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.client:hover,
-.client:focus {
+.client__link:not(:last-child) {
+  margin-right: 30px;
+}
+.client__link:hover,
+.client__link:focus {
   border-color: var(--color-link);
   fill: var(--color-link);
 }
@@ -353,21 +365,21 @@ address {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer .container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
-.adress p {
+.adress__name {
   margin-top: 20px;
   margin-bottom: 9px;
 }
-.adress-contacts li:not(:last-child) {
+.adress__list li:not(:last-child) {
   margin-bottom: 9px;
 }
-.lin {
-  /*це буде модифікатор*/
+.footer__link {
   color: rgba(255, 255, 255, 0.6);
 }
+
 .connect {
   margin-left: 70px;
 }
