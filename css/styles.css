@@ -383,12 +383,23 @@ address {
 .connect {
   margin-left: 70px;
 }
-.connect .title {
+.connect__head {
   margin-bottom: 20px;
   font-size: 14px;
   text-transform: uppercase;
 }
-.footer-icons {
+.connect__link {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  margin: 0 auto;
+  fill: var(--color-icon);
+}
+.connect__link li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.connect__icons {
   display: flex;
   height: 44px;
   width: 44px;
@@ -401,8 +412,8 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.footer-icons:hover,
-.footer-icons:focus {
+.connect__icons:hover,
+.connect__icons:focus {
   background: var(--color-link);
   fill: currentColor;
 }
@@ -410,17 +421,16 @@ address {
 .mailing {
   margin-left: 93px;
 }
-
-.mailing .title {
+.mailing__head {
   margin-bottom: 20px;
   font-size: 14px;
   text-transform: uppercase;
 }
-.email-form {
+.mailing__form {
   align-items: center;
   display: flex;
 }
-.label-form {
+.mailing__input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -435,7 +445,7 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.second-button {
+.mailing__button {
   cursor: pointer;
   background: var(--color-link);
   color: var(--color-w);
@@ -455,29 +465,27 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.second-button:hover,
-.second-button:focus {
+.mailing__button:hover,
+.mailing__button:focus {
   background: var(--modal-button);
 }
-.second-button svg {
+.mailing__button svg {
   margin-left: 10px;
 }
 /*portfolio main*/
-/* buttons portfolio*/
-.portfolio-buttons {
+.filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.filter {
+.filter__link {
   background-color: var(--portfolo-button);
   border-radius: 4px;
 }
-.filter:not(:first-child) {
+.filter__link:not(:first-child) {
   margin-left: 8px;
 }
-
-.buttons {
+.filter__button {
   cursor: pointer;
   background-color: var(--portfolo-button);
   color: var(--color);
@@ -494,73 +502,68 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.buttons:hover,
-.buttons:focus {
+.filter__button:hover,
+.filter__button:focus {
   background: var(--color-link);
   color: var(--color-w);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-/*portfolio*/
-
-.examples {
+/*grid*/
+.grid {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
   list-style: none;
 }
-.examples-item {
-  /*це наш item*/
+.grid__item {
+  width: 370px;
   cursor: pointer;
   margin-left: 30px;
   margin-top: 30px; /*
   flex-basis: cacl((1200- 90px)/3); */
 }
-
-.examples-item a:focus,
-.examples-item a:hover {
+.product {
+  display: block;
+}
+.product:focus,
+.product:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.examples-item a {
+.product__image {
   display: block;
 }
-.port-img {
-  display: block;
-}
-.description {
+.product__meta {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
 
-.examples > li {
-  width: 370px;
-}
-.title-examples {
+.product__name {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
-.text-examples {
+.product__description {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--color-text);
 }
-.port-overlay {
+.product:hover .overlay__message,
+.product:focus .overlay__message {
+  transform: translateY(0);
+}
+.overlay {
   position: relative;
   overflow: hidden;
 }
-.port-link:hover .description-text,
-.port-link:focus .description-text {
-  transform: translateY(0);
-}
-.description-text {
+.overlay__message {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -577,6 +580,8 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
+/*grid*/
+/* portfolio  */
 /*modal windows*/
 .backdrop {
   position: fixed;
@@ -607,7 +612,7 @@ address {
   background: var(--color-w);
   padding: 40px;
 }
-.close {
+.modal__button {
   display: flex;
   cursor: pointer;
   height: 30px;
@@ -623,11 +628,11 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.close:hover,
-.close:focus {
+.modal__button:hover,
+.modal__button:focus {
   fill: var(--color-link);
 }
-.modal .title {
+.modal__head {
   margin-bottom: 12px;
   color: var(--color);
   font-weight: bold;
@@ -641,10 +646,7 @@ address {
   flex-direction: column;
   color: var(--color);
 }
-.text-box {
-  margin-bottom: 20px;
-}
-.form-label {
+.form__label {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.17;
@@ -654,7 +656,7 @@ address {
   position: relative;
 }
 
-.form-input {
+.form__input {
   cursor: pointer;
   margin-top: 4px;
   padding: 0;
@@ -664,12 +666,16 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.form-icon {
+.form__icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
 }
-.form-text {
+
+.form__container {
+  margin-bottom: 20px;
+}
+.form__comment {
   width: 100%;
   margin-top: 4px;
   padding: 12px 16px;
@@ -678,40 +684,37 @@ address {
   border-radius: 4px;
   cursor: pointer;
 }
-.form-text:hover,
-.form-text:focus,
-.form-label:hover,
-.form-label:focus,
-.form-input:focus,
-.form-input:hover {
+.form__comment:hover,
+.form__comment:focus,
+.form__label:hover,
+.form__label:focus,
+.form__input:focus,
+.form__input:hover {
   border-color: var(--color-link);
   outline: none;
 }
-.form-input:hover + .form-icon,
-.form-input:focus + .form-icon {
+.form__input:hover + .form__icon,
+.form__input:focus + .form__icon {
   fill: var(--color-link);
 }
-.form-input + .form-icon,
-.form-input + .form-icon {
+.form__input + .form__icon,
+.form__input + .form__icon {
   transition-property: fill, border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.form-text placeholder {
+.form__comment placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.form .modal-button {
-  margin: 0 auto;
-}
 
-.modal-form {
+.checkbox {
   display: flex;
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
   align-items: center;
 }
-.form-checkbox {
+.checkbox__input {
   appearance: none;
   position: absolute;
   /* width: 1px;
@@ -723,7 +726,7 @@ address {
   overflow: hidden;*/
 }
 
-.test {
+.checkbox__icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -734,10 +737,10 @@ address {
   transition-timing-function: var(--cubic);
 }
 
-.form-checkbox:focus + .test {
+.checkbox__input:focus + .checkbox__icon {
   border-color: var(--color-link);
 }
-.form-checkbox:checked + .test {
+.checkbox__input:checked + .checkbox__icon {
   border-color: var(--color-link);
   background-color: var(--color-link);
   background-image: url("../images/icon-check.svg");
@@ -745,19 +748,20 @@ address {
   border-radius: 2px;
   background-origin: content-box;
 }
-.checkbox-text {
+.checkbox__agreement {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-text);
   padding-left: 8.38px;
 }
-.form-link {
+.checkbox__link {
   color: var(--color-link);
   text-decoration: underline;
 }
-.modal-button {
+.form__button {
   cursor: pointer;
+  margin: 0 auto;
   background: var(--color-link);
   color: var(--color-w);
   font-weight: bold;
@@ -773,7 +777,7 @@ address {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
-.modal-button:hover,
-.modal-button:focus {
+.form__button:hover,
+.form__button:focus {
   background: var(--modal-button);
 }
