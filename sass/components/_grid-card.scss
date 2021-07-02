@@ -29,3 +29,30 @@
   letter-spacing: 0.03em;
   color: var(--color-text);
 }
+.product {
+  &:hover .overlay__message,
+  &:focus .overlay__message {
+    transform: translateY(0);
+  }
+}
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+.overlay__message {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: rgba(33, 150, 243, 0.9);
+  color: var(--color-w);
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
