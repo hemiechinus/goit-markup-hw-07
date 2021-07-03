@@ -2,19 +2,19 @@
   display: flex;
   align-items: center;
 }
-.nav-list {
+.nav__list {
   display: flex;
   margin-left: 93px;
 }
-.nav-list__item--position:not(:last-child) {
+.nav__item--position:not(:last-child) {
   margin-right: 50px;
 }
-.nav-list__link {
+.nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.nav-list__link--current {
+.nav__link--current {
   color: var(--color-link);
   position: relative;
 
