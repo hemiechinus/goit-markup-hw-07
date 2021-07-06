@@ -2,10 +2,7 @@
 @import "./utils/variables";
 @import "./utils/common";
 @import "./utils/container";
-@import "./components/header-portfolio";
-@import "./components/logo";
-@import "./components/link";
-@import "./layout/nav";
+@import "./components/header";
 @import "./components/section";
 @import "./layout/banner";
 @import "./layout/specifics";
@@ -13,9 +10,6 @@
 @import "./layout/team";
 @import "./layout/client";
 @import "./layout/footer";
-@import "./components/adress";
-@import "./components/connect";
-@import "./components/mailing";
 @import "./components/port-filter";
 @import "./layout/grid";
 @import "./components/modal";
